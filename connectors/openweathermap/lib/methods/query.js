@@ -16,12 +16,19 @@ exports.query = function(Model, options, callback) {
 			return callback(error);
 		}
 
-		for(let daylyForecast of data.list){
+		for(var i = 0, size = data.list.length; i < size; i++){
+			var daylyForecast = data.list[i];
+
+			var weatherCondition = 'unknown';
+			if(daylyForecast.weather && daylyForecast.weather.length){
+				weatherCondition = daylyForecast.weather[0].description;
+			}
+
 			results.push(Model.instance({
 				city      : data.city.name,
 				country   : data.city.country,
 				date      : new Date(daylyForecast.dt * 1000),
-				condition : daylyForecast.weather[0].description,
+				condition : weatherCondition,
 				temp_max  : daylyForecast.temp.max,
 				temp_min  : daylyForecast.temp.min
 			}, true));
