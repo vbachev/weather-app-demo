@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	Hello world!
+	<ul>
+		{{#each forecasts}}
+			<li>
+				<p>
+					<strong>{{city}}, {{country}}</strong>
+					on {{date}}<br>
+					{{condition}}<br>
+					<em>Temperature (°C): {{temp_min}} / {{temp_max}}</em>
+				</p>
+			</li>
+		{{/each}}
+	</ul>
+</body>
+</html>
