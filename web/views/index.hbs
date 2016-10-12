@@ -2,21 +2,37 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Arrow Weather Forecast</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-	Hello world!
-	<ul>
-		{{#each forecasts}}
-			<li>
-				<p>
-					<strong>{{city}}, {{country}}</strong>
-					on {{date}}<br>
-					{{condition}}<br>
-					<em>Temperature (°C): {{temp_min}} / {{temp_max}}</em>
-				</p>
-			</li>
-		{{/each}}
-	</ul>
+
+	<header class="header">
+		<div class="wrapper">
+			<h1 class="header-title">Arrow Weather Forecast</h1>
+		</div>
+	</header>
+
+	<div class="wrapper">
+
+		<article class="panel search">
+			<h1 class="panel-title">Get local forecast</h1>
+			<form id="searchForm" class="search-form">
+				<input type="text" id="searchField" class="search-field" placeholder="Location name">
+				<button type="submit" id="searchButton" class="search-button">Search</button>
+			</form>
+			<button id="geolocationButton" class="geolocation-button">
+				Use current location
+			</button>
+		</article>
+
+		<article id="resultsContainer" class="panel results">
+			No location selected ...
+		</article>
+
+	</div>
+
+	<script src="js/main.js"></script>
 </body>
 </html>

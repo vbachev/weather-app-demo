@@ -1,0 +1,176 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #333;
+	background-color: #e7e7e7;
+}
+
+.wrapper {
+	position: relative;
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.header {
+	padding: 10px 0;
+	margin: 0 0 20px;
+	background: #b50d00;
+	color: #fff;
+}
+
+.header-title {
+	margin: 0;
+	font-size: 1em;
+	line-height: 1.2em;
+	text-align: center;
+}
+
+.panel {
+	padding: 20px;
+	margin: 0 0 20px;
+	background: #f7f7f7;
+	border-radius: 4px;
+	border: 1px solid #cbcbcb;
+}
+
+.panel-title {
+	border-bottom: 1px solid #cbcbcb;
+	margin: -20px -20px 20px;
+	padding: 10px 20px;
+}
+
+.search-form {
+	position: relative;
+	margin: 0 0 20px;
+	overflow: hidden;
+	line-height: 0;
+	border-radius: 20px;
+	border: 1px solid #aaa;
+}
+
+.search-field,
+.search-button,
+.geolocation-button {
+	border: 0 none;
+	-webkit-appearance: none;
+	transition: background .2s ease-out;
+}
+
+.search-field {
+	width: 100%;
+	height: 26px;
+	box-sizing: border-box;
+	padding: 5px 100px 5px 20px;
+	line-height: 1em;
+	background: #eee;
+}
+
+.search-field:focus {
+	outline: 0 none;
+	background: #fff;
+}
+
+.search-button {
+	position: absolute;
+	z-index: 20;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	padding: 0 20px;
+	background-color: #b50d00;
+	color: #fff;
+	font-weight: bold;
+}
+
+.geolocation-button {
+	display: none;
+	height: 26px;
+	padding: 0 20px;
+	border-radius: 20px;
+	background-color: #b50d00;
+	color: #fff;
+	font-weight: bold;
+}
+
+.has-geolocation .geolocation-button {
+	display: inline-block;
+}
+
+.search-button:focus,
+.search-button:hover,
+.geolocation-button:focus,
+.geolocation-button:hover {
+	background: #9d0e00;
+	outline: 0 none;
+	cursor: pointer;
+}
+
+.temperature {
+	font-size: 1.5em;
+	font-weight: bold;
+	text-align: right;
+}
+
+.temperature:after {
+	content: '°';
+	margin-left: -4px;
+    opacity: .75;
+}
+
+.temperature.high {
+	color: #b50d00;
+}
+
+.temperature.low {
+	color: #0063DC;
+}
+
+.results-summary {
+	padding: 0 0 20px;
+}
+
+.results-temperatures {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	text-align: right;
+}
+
+.results-temperatures .temperature {
+	display: inline-block;
+	width: 50px;
+}
+
+.results-forecasts {
+	list-style-type: none;
+	padding: 0;
+	margin: 0 -20px -20px;
+}
+
+.forecast {
+	position: relative;
+	border-top: 1px solid #cbcbcb;
+	padding: 20px 100px 20px 20px;
+}
+
+.forecast-date {
+	margin: 0 0 10px;
+}
+
+.forecast-temperatures {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.forecast-condition {
+	margin: 0;
+	font-style: italic;
+}

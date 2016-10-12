@@ -5,17 +5,8 @@ var HomeRoute = Arrow.Router.extend({
 	path: '/',
 	method: 'GET',
 	description: 'Homepage',
-	action: function (req, resp, next) {
-		req.server.getModel('forecast').query({}, function(err, results) {
-			if (err) {
-				next(err);
-			} else {
-				resp.render('index', {
-					forecasts : results
-				});
-				next();
-			}
-		});
+	action: function (request, response) {
+		response.render('index');
 	}
 });
 

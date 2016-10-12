@@ -1,0 +1,54 @@
+<h1 class="panel-title">
+    {{#if city}}
+        {{city}}, {{country}}
+    {{else}}
+        Unknown location
+    {{/if}}
+</h1>
+
+<div class="results-summary">
+    <p>
+        Temperature range for 5-day period:
+    </p>
+
+    <ul class="results-temperatures top">
+        {{#each temps.top}}
+            <li class="temperature high">
+                {{this}}
+            </li>
+        {{/each}}
+    </ul>
+
+    <ul class="results-temperatures bottom">
+        {{#each temps.bottom}}
+            <li class="temperature low">
+                {{this}}
+            </li>
+        {{/each}}
+    </ul>
+</div>
+
+
+<ul class="results-forecasts">
+    {{#each days}}
+        <li class="forecast">
+            <h3 class="forecast-date">
+                {{date}}
+            </h3>
+
+            <p class="forecast-condition">
+                {{condition}}
+            </p>
+
+            <ul class="forecast-temperatures">
+                <li class="temperature high">
+                    {{temp_max}}
+                </li>
+                
+                <li class="temperature low">
+                   {{temp_min}} 
+                </li>
+            </ul>
+        </li>
+    {{/each}}
+</ul>
